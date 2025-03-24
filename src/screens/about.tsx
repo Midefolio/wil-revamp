@@ -39,6 +39,11 @@ const About = () => {
       role: "Graphics Designer",
       image: "/goodness.jpg"
     },
+    {
+      name: "Ayoade Oluwaseyi",
+      role: "Intern Frontend developer",
+      image: "/Dan.jpg"
+    },
   ]
 
   const Navigate = useNavigate();

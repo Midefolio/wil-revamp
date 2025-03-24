@@ -30,7 +30,7 @@ const ContactUs = () => {
                  <span className="pd-10 rad-10 my-b-shadow"> <i className="fab fa-whatsapp green"></i></span>
                  <div className="my-mother down-3 xs-down-10"><h1 className="px9 xs-px15 fnt-system">Chat With Us</h1></div>
                  <div className="my-mother xs-down-2 down-1"><span className="px9 fnt-system xs-px12 faded-sol light">Speak with a representative</span></div>
-                 <div className="my-mother down-3 xs-down-8"><a href="https://wa.link/vc6bbo" className="pd-10 black my-b-shaow bd-code- btn-hover my-b-shadow xs-px12 px9 rad-10 c-pointer fnt-system" >Start a conversation</a></div>
+                 <div className="my-mother down-3 xs-down-8"><a href="https://wa.link/xb0qq5" className="pd-10 black my-b-shaow bd-code- btn-hover my-b-shadow xs-px12 px9 rad-10 c-pointer fnt-system" >Start a conversation</a></div>
              </div>
            </div>
            <div className="my-col-4  xs-down-5 xs-12 bg-white rad-10 my-b-shadow my-bottom-50">
