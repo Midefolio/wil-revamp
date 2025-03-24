@@ -2,6 +2,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { MutableRefObject } from 'react';
 import { notifyError } from '../utils/useutils';
+import { useNavigate } from 'react-router-dom';
 
 type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 type Params = Record<string, any> | null;
@@ -10,13 +11,10 @@ type Token = string | null;
 type AbortControllerRef = MutableRefObject<AbortController | null>;
 
 
-const logout = () => {
-  localStorage.removeItem("solCart_JWT");
-  localStorage.removeItem("solCart-active");
-  localStorage.removeItem("solCart-email");
-  window.location.href = '/registration'; // Reload the current page
-};
-
+const logout =()=> {
+  localStorage.removeItem('willmaestroit_blog_manager_token');
+  window.location.reload();
+}
 
 const makeRequest = async <T = any>(
     method: RequestMethod,
@@ -55,6 +53,9 @@ const makeRequest = async <T = any>(
         if (errorRes?.error === 'jwt expired') {
           logout()
           notifyError("session expired: please re-login");
+        }
+        if (errorRes?.error === 'page not found') {
+          window.location.href = '/page-not-found'      
         }
         if (errorRes) {notifyError(errorRes.error)}
       } else {

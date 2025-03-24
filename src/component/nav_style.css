@@ -1,0 +1,100 @@
+.mobile-menu {
+    width:100vw;
+    top: 0;
+    /* padding-bottom: unset !important; */
+    display:flex;
+    align-items: center !important;
+    position: fixed;
+    z-index: 1000;
+    height:auto;
+    padding: 10px 0px !important;
+    background-color: #fff;
+
+    .mobile-nav-container {
+      width:94%;
+      margin-left:3%;
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+
+      .free-con {
+        width:max-content;
+        height: max-content;
+        align-items:center;
+        justify-content: center;
+        display: flex;
+        padding: 10px 10px;
+        gap: 10px;
+      }
+    }
+  }
+
+  
+
+  .mobile-menu-open {
+    width: 100vw;
+    background-color:#000;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 3999;
+    transition: .3s ease-in-out;
+    margin-left: -100vw;
+    
+    .mobile-menu-container {
+        width:94%;
+        margin-left:3%;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin-top: 20px;
+        flex-direction:column;
+        gap: 10px;
+
+        .header {
+          width: 100%;
+          height: max-content;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          .menu-logo {
+              display: flex;
+              width: 50px !important;
+              height: 50px !important;
+              overflow: hidden;
+             
+              img {
+               width: 100% !important;
+               height: 100% !important;
+               object-fit: cover !important;
+              }
+            }
+        }
+
+        .body {
+            width:100%;
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            gap: 30px;
+            
+            button {
+                color: white;
+                text-align: left;
+                font-size: 15px;
+                font-family:ubuntuMedium;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #aaa;
+            }
+        }
+
+    }
+
+
+  }
+
+  .open-nav {
+    margin-left: 0%;
+    transition: .3s ease-in-out;
+  }

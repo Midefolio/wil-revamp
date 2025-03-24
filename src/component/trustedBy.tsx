@@ -38,7 +38,7 @@ const TrustedBy = () => {
               max: 464,
               min: 0,
             },
-            items: 1,
+            items: 2,
             partialVisibilityGutter: 1,
           },
           tablet: {
@@ -60,21 +60,21 @@ const TrustedBy = () => {
         transitionDuration={1000}
       >
         {/* Standard */}
-        <div className="centere my-btn-sm c-pointer" >
-          <span className="px12 ubuntuBold faded-2" >FutureLivingAfrica</span>
-          <div><span className="px8 ubuntuLight faded" > https://futurelivingafrica.com</span></div>
+        <div className="centere c-pointer" >
+          <h1 className="px12 fnt-system xs-px13 faded-" >FutureLivingAfrica</h1>
+          <div><h2 className="px8 xs-px12 fnt-system faded-2 light" > https://futurelivingafrica.com</h2></div>
         </div>
-        <div className="centere my-btn-sm c-pointer" >
-          <span className="px12 ubuntuBold faded-2" >Adesina Assets</span>
-          <div><span className="px8 ubuntuLight faded" > https://adesina.ng</span></div>
+        <div className="centere c-pointer" >
+          <h1 className="px12 fnt-system xs-px13 faded-" >Adesina Assets</h1>
+          <div><h2 className="px8 xs-px12 fnt-system faded-2 light" > https://adesina.ng</h2></div>
         </div>
-        <div className="centere my-btn-sm c-pointer" >
-          <span className="px12 ubuntuBold faded-2" >Folda Realty</span>
-          <div><span className="px8 ubuntuLight faded">https://foldarealties.com</span></div>
+        <div className="centere c-pointer" >
+          <h1 className="px12 fnt-system xs-px13 faded-" >Folda Realty</h1>
+          <div><h2 className="px8 xs-px12 fnt-system faded-2 light">https://foldarealties.com</h2></div>
         </div> 
-        <div className="centere my-btn-sm c-pointer" >
-          <span className="px12 ubuntuBold faded-2" >L-Mobile Groceres</span>
-          <div><span className="px8 ubuntuLight faded">https://lmobile.com.ng</span></div>
+        <div className="centere c-pointer" >
+          <h1 className="px12 fnt-system xs-px13 faded-" >L-Mobile Groceres</h1>
+          <div><h2 className="px8 xs-px12 fnt-system faded-2 light">https://lmobile.com.ng</h2></div>
         </div>
     
              </Carousel>

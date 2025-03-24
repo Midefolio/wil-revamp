@@ -1,71 +1,84 @@
-const MyFooter = () => {
-    return ( <>
-   <div className="bg-black my-mother my-bottom-50">
-    <div className="my-col-10 xs-10 xs-off-1 md-10 md-off-1 off-1 down-5 md-down-5 xs-down-5">
-     <div className="my-mother">
-      <div className="my-col-4 xs-12 md-12">
-      <div className="my-col-12 hidden-ls xs-down-10 down-4 gap-elements centered-align">
-        <span className="team-icons c-pointer"><img src="https://img.icons8.com/?size=100&id=1288&format=png&color=FA5252" alt="" /></span>
-          <div className="xs-px15 c-pointer px10 down- xs-down-2 white interBold">
-            Anioma <span className="faded-sol">Ranch</span>
-            <div className="px8 xs-px10 white InterSemiBold">and Produce LTD</div>
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { FooterMenu } from "../data/category";
+import { CiLocationOn } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
+
+const WmFooter = () => {
+  const Navigate = useNavigate();
+  return (
+    <>
+      <div className="my-mother down-2">
+        <div className="my-col-10 xs-10 xs-off-1 off-1 xs-down- down-5">
+          <div className="gap-elemens xs-12 hidden-s">
+            <div className="my-col-4 xs-12">
+              <div className="my-mother gap-elements">
+                 <div className="logo mc-h-30"></div>
+                 <h1 className="px10 xs-px13 down-1 fnt-system bolder xs-px15">WillmaestroIt Solutions</h1>
+              </div>
+              <div className="my-mother gap-elements centered-align xs-down-5 down-5">
+                {/* <i className=" color-code- fas fa-envelope"></i> */}
+                <span className="ubuntuLight fnt-system faded-2 px10 xs-px12">info@willmaestro.com</span>
+              </div>
+              <div className="my-mother gap-elements xs-down-2 centered-align down-1">
+                 <i className=" color-code- fas fa-phone"></i>
+                <span className="ubuntuLight fnt-system faded-2 px10 xs-px12">(+234) 8101854076</span>
+              </div>
+              <div className="my-mother gap-elements xs-down-5 down-3">
+                {/* <a href="" className="icons c-pointer bg-color-code-1 white">
+                  <i className="fab px8 xs-px13 fa-facebook"></i>
+                </a> */}
+                <a href="https://x.com/wglobalit77250?s=21" className="icons c-pointer bg-color-code-1 white">
+                  <i className="fab px8 xs-px13 fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/willmaestero/" className="icons c-pointer bg-color-code-1 white">
+                  <i className="fab px8 xs-px13 fa-linkedin"></i>
+                </a>
+                <a href="mailto:mailto:info@WillmaestroIt.com" className="icons c-pointer bg-color-code-1 white">
+                  <i className="fa px8 xs-px13 fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+           <div className="xs-12 xs-down-10 gap-elements">
+           {FooterMenu?.map((i: any, index: any) => (
+              <div className="my-col-4 xs-12 down-1" key={index}>
+                <div>
+                  <h1 className="ubuntuBold px10 xs-px15 fnt-system bolder">{i.menu}</h1>
+                </div>
+                 <div className="my-mother down-1 xs-12">
+                 {i.subMenu?.map((x: any) => (
+                  <div className="my-mothe down-1 xs-down-5" key={x.nemu}>
+                    <span className=" px10 xs-px12 c-pointer fnt-system faded-2" onClick={()=> {Navigate(x.url)}}>{x?.menu}</span>
+                  </div>
+                ))}
+                 </div>
+              </div>
+            ))}
+
+            <div className="my-col-5 xs-12 xs-down-10 hidden-xs">
+              <div><span className="px13 fnt-system">Subscribe to  our Newsletter</span></div>
+              <div className="my-mother gap-elemens centerd-align bg-s2 rad-30 down-2">
+                <input type="text" placeholder="enter email" className="ubuntuLight fnt-system faded-2 rad-30 px10 xs-px13 my-col-6 my-btn-sm bg-s2" />
+                <button className="my-btn-sm fnt-system color-code-1 px10 xs-px13 rad-30 bg-s2">Subscribe</button>
+              </div>
+            </div>
+           </div>
+
+            {/* <div className="my-col-5 xs-12 xs-down-10 hidden-ls">
+              <div><span className="px20 interExtraBold xs-px30 white">Subscribe to  our Newsletter</span></div>
+              <div className="my-mother xs-down-3 bg-white my-btn-sm rad-30 unset-indent down-10">
+                <input type="text" placeholder="enter email" className="InterLight xs-8 px12 rad-10 bg-white" />
+                <button className="input-1 my-col-3 mg-15 xs-3 xs-down-1 interBold flex px12 unset-indent bg-color-code-1 white down-2">Subscribe</button>
+              </div>
+            </div> */}
           </div>
-        </div> 
-      <div className="my-mother down-10 xs-down-10">
-        <span className="px13 alice xs-px13 md-px20 poppings-Bold upper-case">ContACT US</span>
-        <div className="my-col-12 hidden-xs xs-down-10 down-4 gap-elements centered-align">
-        <span className="team-icons c-pointer"><img src="https://img.icons8.com/?size=100&id=1288&format=png&color=FA5252" alt="" /></span>
-          <div className="xs-px15 c-pointer px10 down- xs-down-2 white interBold">
-            Anioma <span className="faded-sol">Ranch</span>
-            <div className="px8 xs-px10 white InterSemiBold">and Produce LTD</div>
-          </div>
-        </div> 
-        <div className="my-mother down-8 xs-down-5 md-down-3 hidden-ls"><span className="px12 xs-px15 md-px20 lower-case alice"><i className="fas fa-envelope red"></i> info@aniomaranch.com</span></div>
-        <div className="my-mother hidden-ls down-5 xs-down-2 md-down-3"><span className="px12 xs-px15 md-px20 lower-case alice"><i className="fas fa-phone red"></i> +234-707-752-0079 </span></div>
-        <div className="my-mother hidden-ls down-5 xs-down-2 md-down-3"><span className="px12 xs-px15 md-px20 lower-case alice"><i className="fas fa-map-marker-alt red"></i> Umuaja, Delta State, Nigeria </span></div>
-      </div>
-      </div>
-      <div className="my-col-4 xs-12 md-down-10 xs-down-10 md-12">
-       <div className="px13 alice down-11 xs-px13 md-px20 poppings-Bold upper-case">Join Us on Our Journey</div>
-        <div className="my-mother down-3 xs-down-3 md-down-3">
-        <div className="px13 alice xs-px13 gap-elements md-px20">
-          <input type="text" placeholder="Type your email" className="my-col-7 xs-9 xs-px12 md-px13 input-2 px9 InterLight bg-white rad-10" />
-          <span className="white px10 xs-px12 input centered-align flex unset-indent my-col-3 xs-3 bg-red rad-10">Submit</span>
+          <h1 className="my-mother down-5 xs-down-15 px10 xs-px10 my-bottom-20 fnt-system">
+             © 2024 Willmaestro. All rights reserved. <br />
+              Privacy Policy | Terms of Service
+          </h1>
         </div>
       </div>
-      </div>
-      <div className="my-col-4 xs-12 md-down-8 xs-down-10 md-12">
-      <div className="px13 alice down-10 ls-right xs-px13 md-px20 poppings-Bold upper-case">Socials</div>
-        <div className="my-mother ls-right down-6 md-down-3 xs-down-2">
-        <div className="px13 alice xs-px13 ls-right xs-down-5 gap-eements md-px20">
-          <a href="" className="pd-5 white"><i className="fab fa-facebook"></i></a>
-          <a href="" className="pd-5 white mg-5"><i className="fab fa-twitter"></i></a>
-          <a href="" className="pd-5 white mg-5"><i className="fab fa-instagram"></i></a>
-          <a href="" className="pd-5 white mg-5"><i className="fab fa-linkedin"></i></a>
-        </div>
-        <div className="my-mother down-3 white xs-down-3 xs-px15">@aniomaranch</div>
-        <div className="my-mother hidden-xs hidden-md hidden-ls down-8 xs-down-3 md-down-3"><span className="px12 xs-px13 md-px20 hidden-xs lower-case alice"><i className="fas fa-map-marker-alt color-code-1"></i> Umuaja, Delta State, Nigeria  </span></div>
-      </div>
-      </div>
-     </div>
-     <div className="my-mother down-5 centered-align gap-elements hidden-md hidden-xs  space-50">
-      <div className="my-col-4">
-        <div className="my-mother gap-elements"><span className="px12 xs-px13 md-px20 hidden-xs lower-case alice"><i className="fas fa-phone red"></i> info@aniomaranch.com.ng </span></div>
-      </div>
-      <div className="my-col-4">
-        <div className="my-mother gap-elements"><span className="px12 xs-px13 md-px20 hidden-xs lower-case alice"><i className="fas fa-phone red"></i> +234-707-752-0079 </span></div>
-      </div>
-      <div className="my-col-4">
-      <div className="my-mother gap-elements"><span className="px12 xs-px12 md-px20 lower-case alice"><i className="fas fa-map-marker-alt red"></i> Umuaja, Delta State, Nigeria </span></div>
-      </div>
-     
-     </div>
-     <div className="my-mother bd-bottom-bold xs-down-5 md-down-5 down-5"></div>
-     <div className="centered down-5 my-mother xs-down-10 md-down-5  xs-px13 md-px13 alice px10"><span>© 2024 Anioma. All rights reserved. Privacy Policy | Terms of Service</span></div>
-    </div>
-   </div>
-    
-    </> );
-}
- 
-export default MyFooter;
+    </>
+  );
+};
+
+export default WmFooter;

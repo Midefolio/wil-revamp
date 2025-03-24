@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { LuPanelLeftClose } from "react-icons/lu";
 import { AiOutlineCreditCard, AiOutlineCustomerService, AiOutlineDashboard, AiOutlineLink, AiOutlineLogout, AiOutlinePayCircle, AiOutlineSetting, AiOutlineUserAdd } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { sideBar } from "../data/dashboard_layout";
+import { sideBar } from "../data/category";
 
 const CrmLayouts = ({active}:any) => {
     const router = useNavigate();
