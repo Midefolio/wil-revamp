@@ -26,7 +26,7 @@ const About = () => {
     },
     {
       name: "OluwaFolabomi Bakare",
-      role: "Content Maketer",
+      role: "Content Makerter",
       image: "/fola.jpg"
     },
     {
