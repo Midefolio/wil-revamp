@@ -30,6 +30,8 @@ const HomePage = () => {
         <section className='fnt-system bg-grad'>
             <NavBar active="home" />
             <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
+
+            
             <div className='my-container centered-align down-20 '>
                 <div className='hero-container gap-elements '>
                     <div className='my-col-6 down-1 '>

@@ -74,7 +74,7 @@ const About = () => {
               At <span className="color-code-1 fnt-system">WillmaestroIT</span>, we tailor our services to meet your unique needs, from digital marketing and social media management to advanced software design and development solutions, driving innovation and efficiency in every project
             </span>
           </div>
-          <div className="my-mother down-10 centered my-bottom-50 xs-down-10"> <a href="#" onClick={() => { Navigate('/contacts') }} className="rad-30 px9 b-shaow ubuntuBold  bg-color-code-1 white my-btn-sm poppings-Bold xs-px15" >Take a Video tour <span className="icons bg-white mg-10 px8 xs-px12" ><i className="fas color-code-1 fa-play" ></i></span> </a></div>
+          <div className="my-mother down-10 centered my-bottom-50 xs-down-10"> <a href="#" onClick={() => { Navigate('/video') }} className="rad-30 px9 b-shaow ubuntuBold  bg-color-code-1 white my-btn-sm poppings-Bold xs-px15" >Take a Video tour <span className="icons bg-white mg-10 px8 xs-px12" ><i className="fas color-code-1 fa-play" ></i></span> </a></div>
         </div>
 
 

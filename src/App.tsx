@@ -22,6 +22,7 @@ import NotFound from "./screens/404";
 import ContactUs from "./screens/contact_us";
 import LandingPage from "./screens/landingPage";
 import Pratice from "./pages/practice";
+import VideoPlayerPage from "./screens/video";
 
 const App = () => {
   const token = localStorage.getItem('willmaestroit_blog_manager_token');
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/practice" element={<Pratice/>}/>
         <Route path="/contacts" element={<ContactUs/>}/>
+        <Route path="/video" element={<VideoPlayerPage/>}/>
         <Route path="/blogs" element={<Blogs/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/posts/:title" element={<Posts/>}/>
