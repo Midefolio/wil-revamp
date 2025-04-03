@@ -38,7 +38,7 @@ const Home = () => {
         <div className="my-col-6 xs-container xs-centered top-10" >
           <div className="my-col-12 xs-down-15"><span className="bg-color-code-3 rad-10 px9 xs-px13 color-code-1 pd-10 ubuntuLight">No. 1 SEO & Digital Marketing Agency</span></div>
           <div className="my-mother down-2 xs-down-15">
-            <span className="px40 ubuntuBold black xs-px25 fnt-sstem bolder" >Grow Your Business With  <span className="color-code-1">Trusted </span> & <span className="color-code-1">Figure Driven</span> Results</span>
+            <span className="px40 ubuntuBold black xs-px25 font-bold fnt-sstem font-bolder" >Grow Your Business With  <span className="color-code-1">Trusted </span> & <span className="color-code-1">Figure Driven</span> Results</span>
           </div>
           <div className="my-mother down-1 xs-down-8 lin-2" ><h2 className="px12 xs-px13 faded-2 fnt-system light">With a reputation for excellence, <span className='color-code-1 bold'> WillmaestroIT</span> has helped businesses to grow through our result oriented services. We don’t just build systems; we deliver results</h2></div>
         </div>
@@ -81,7 +81,7 @@ const Home = () => {
                 <span className="px12 ubuntuLight xs-px13 fnt-system light faded-2" >We are your trusted partner for <span className="color-code-1 bold" >IT solutions</span>. With our proven expertise and innovative strategies the digital landscape.</span>
               </div>
               <div className="my-mother gap-elements-centered down-3 xs-down-8" >
-                <a href="#" className="rad-30 px13 xs-px13 b-shadow fnt-system  bolder white bg-yellow my-btn-sm" onClick={() => { Navigate('/about') }} >Take a Video Tour <span className="icons bg-white xs-px12  mg-10 px8" ><i className="fas orange  fa-play" ></i></span> </a>
+                <a href="#" className="rad-30 px13 xs-px13 b-shadow fnt-system  bolder white bg-yellow my-btn-sm" onClick={() => { Navigate('/video') }} >Take a Video Tour <span className="icons bg-white xs-px12  mg-10 px8" ><i className="fas orange  fa-play" ></i></span> </a>
               </div>
               {/* <div className="my-mother top-10 hidden-ls">
                 <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>

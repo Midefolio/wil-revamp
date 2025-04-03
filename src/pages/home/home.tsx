@@ -36,7 +36,7 @@ const HomePage = () => {
                 <div className='hero-container gap-elements '>
                     <div className='my-col-6 down-1 '>
                         <span className='pd-btn bg-color-code-3 ubuntuLight color-code-1 px9'>No. 1 SEO & Digital Marketing Agency</span>
-                        <Fade left> <h1 className='px30 fnt-system lin-2 down-3' >Grow Your Business With  <span className="color-code-1">Trusted &</span> <span className="color-code-1">Figure Driven</span> Results</h1></Fade>
+                        <Fade left> <h1 className='px30 fnt-system lin-2 font-bolder down-3' >Grow Your Business With  <span className="color-code-1">Trusted &</span> <span className="color-code-1">Figure Driven</span> Results</h1></Fade>
                         <Fade left> <p className='px12 fnt-system down-3 faded-2 down-1 '> With a reputation for excellence, <span className='color-code-1 bold'> WillmaestroIT</span> has helped businesses to grow through our result oriented services. We don’t just build systems; we deliver results</p></Fade>
 
                         <Fade bottom ><div className="my-mother down-4">

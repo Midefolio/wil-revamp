@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
+import "./video_carousel.css";
 
 interface Video {
   id: string;
@@ -13,29 +14,28 @@ interface VideoCarouselProps {
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({ videos }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true); // Default to playing
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
-  const [showControls, setShowControls] = useState(true); // Controls visible initially
+  const [showControls, setShowControls] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const controlsTimerRef = useRef<NodeJS.Timeout>();
 
-  // Play/Pause Toggle
   const handlePlayPause = () => {
     if (videoRef.current) {
       isPlaying ? videoRef.current.pause() : videoRef.current.play();
       setIsPlaying(!isPlaying);
-      setShowControls(true); // Show controls when interacting
+      showControlsTemporarily();
     }
   };
 
-  // Mute/Unmute Toggle
   const handleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
+      showControlsTemporarily();
     }
   };
 
-  // Change Video
   const goToVideo = (index: number) => {
     setCurrentIndex(index);
     setIsPlaying(true);
@@ -43,73 +43,81 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ videos }) => {
       videoRef.current.src = videos[index].src;
       videoRef.current.play();
     }
+    showControlsTemporarily();
   };
 
-  // Auto-hide controls after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  const showControlsTemporarily = () => {
+    setShowControls(true);
+    if (controlsTimerRef.current) {
+      clearTimeout(controlsTimerRef.current);
+    }
+    controlsTimerRef.current = setTimeout(() => {
       setShowControls(false);
     }, 5000);
-    return () => clearTimeout(timer);
-  }, [isPlaying]);
+  };
 
-  // Auto-play video on page load
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();
     }
+    return () => {
+      if (controlsTimerRef.current) {
+        clearTimeout(controlsTimerRef.current);
+      }
+    };
   }, []);
 
-  // Auto-move to next video when current video ends
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.addEventListener("ended", () => {
+    const video = videoRef.current;
+    if (video) {
+      const handleEnded = () => {
         goToVideo((currentIndex + 1) % videos.length);
-      });
+      };
+      video.addEventListener("ended", handleEnded);
+      return () => video.removeEventListener("ended", handleEnded);
     }
-  }, [currentIndex]);
+  }, [currentIndex, videos.length]);
 
   return (
-    <div className="relative w-full">
-      {/* Video Container */}
-      <div className="aspect-video relative rounded-xl overflow-hidden bg-black w-full h-full">
+    <div className="carousel-container">
+      <div className="video-wrapper"
+           onMouseMove={showControlsTemporarily}
+           onMouseEnter={() => setShowControls(true)}
+           onMouseLeave={() => setTimeout(() => setShowControls(false), 2000)}>
         <video
           ref={videoRef}
           src={videos[currentIndex].src}
-          className="absolute w-full h-full object-contain"
+          className="video-element"
           autoPlay
           playsInline
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
-          onMouseMove={() => setShowControls(true)} // Show controls on hover
         />
 
-        {/* Video Controls (Hidden after 5 seconds) */}
         {showControls && (
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex justify-between items-center transition-opacity duration-500">
-            <button onClick={handlePlayPause} className="text-white hover:text-blue-400 transition">
+          <div className="video-controls">
+            <button onClick={handlePlayPause} className="control-button">
               {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
             </button>
-            <h3 className="text-white text-sm sm:text-base">{videos[currentIndex].title}</h3>
-            <button onClick={handleMute} className="text-white hover:text-blue-400 transition">
+            <h3 className="video-title">{videos[currentIndex].title}</h3>
+            <button onClick={handleMute} className="control-button">
               {isMuted ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
             </button>
           </div>
         )}
       </div>
 
-      {/* Navigation Controls */}
-      <div className="flex justify-between items-center mt-6 px-4">
+      <div className="navigation-controls">
         <button
           onClick={() => goToVideo((currentIndex - 1 + videos.length) % videos.length)}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          className="nav-button"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
 
         <button
           onClick={() => goToVideo((currentIndex + 1) % videos.length)}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          className="nav-button"
         >
           <ChevronRight className="w-6 h-6" />
         </button>

@@ -692,7 +692,7 @@ nav {
   padding-right: 5px;
 }
 .bolder {
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 .orange {
   color: rgb(255, 165, 0) !important;

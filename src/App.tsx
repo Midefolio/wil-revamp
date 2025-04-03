@@ -22,7 +22,7 @@ import NotFound from "./screens/404";
 import ContactUs from "./screens/contact_us";
 import LandingPage from "./screens/landingPage";
 import Pratice from "./pages/practice";
-import VideoPlayerPage from "./screens/video";
+import VideoPlayerPage from "./screens/videos/video";
 
 const App = () => {
   const token = localStorage.getItem('willmaestroit_blog_manager_token');
