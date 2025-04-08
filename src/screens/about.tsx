@@ -25,8 +25,8 @@ const About = () => {
       image: "/mayowa.jpg"
     },
     {
-      name: "OluwaFolabomi Bakare",
-      role: "Content Makerter",
+      name: "Oluwafolabomi Bakare",
+      role: "Content marketer",
       image: "/fola.jpg"
     },
     {
@@ -55,13 +55,9 @@ const About = () => {
         <div className="my-container xs-container md-container xs-down-10vh d-col-1">
           <div className="centered xs-12 xs-down-5vh ">
             <div className="my-col-6 xs-12 off-3 px20 xs-px20 down-2 black fnt-system">
-              <h3>Build Your Business Idea With Our IT Development Solutions.</h3>
+              <h2>Build Your Business Idea With Our IT Development Solutions.</h2>
             </div>
-            <div className="my-col-8 xs-container xs-down-5 md-down-5 off-2 down-3">
-              <span className="px13 xs-px15 faded-2 fnt-system">
-                We specialize in revolutionizing your online presence through expert IT solutions.
-              </span>
-            </div>
+           
           </div>
           {/* <div className="my-mother down-5 gap-elements-center xs-down-10">
         <div className="img-container-2 my-col-4 xs-4 hidden-xs" > <div className="bg-overla" ></div> <img src="/images/lady_1.jpeg" alt="" /> </div>
@@ -74,7 +70,7 @@ const About = () => {
               At <span className="color-code-1 fnt-system">WillmaestroIT</span>, we tailor our services to meet your unique needs, from digital marketing and social media management to advanced software design and development solutions, driving innovation and efficiency in every project
             </span>
           </div>
-          <div className="my-mother down-10 centered my-bottom-50 xs-down-10"> <a href="#" onClick={() => { Navigate('/video') }} className="rad-30 px9 b-shaow ubuntuBold  bg-color-code-1 white my-btn-sm poppings-Bold xs-px15" >Take a Video tour <span className="icons bg-white mg-10 px8 xs-px12" ><i className="fas color-code-1 fa-play" ></i></span> </a></div>
+          <div className="my-mother down-10 centered my-bottom-50 xs-down-10"> <a href="#" onClick={() => { Navigate('/contactus') }} className="rad-30 px9 b-shaow ubuntuBold  bg-color-code-1 white my-btn-sm poppings-Bold xs-px15" >THIS IS WILLMAESTRO <span className="icons bg-white mg-10 px8 xs-px12" ><i className="fas color-code-1 fa-play" ></i></span> </a></div>
         </div>
 
 
@@ -157,7 +153,7 @@ const About = () => {
                     <div className="my-container xs-container xs-down-10 centered down-5" >
                       <div><h1 className="px10  fnt-system xs-px20 fnt-system" >Mobile Apps & Softwares</h1></div>
                       <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><img src="/images/appdev.svg" alt="" /></span></div>
-                      <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Build your startup with professionally designed and user-friendly Apps. We optimize your Apps to rank higher. </p></div>
+                      <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Kickstart your startup with professionally designed, user-friendly apps, optimized for top rankings and maximum impact. </p></div>
                     </div>
                   </div>
                 </Zoom>
@@ -166,7 +162,7 @@ const About = () => {
                     <div className="my-container xs-container xs-down-10 centered down-5" >
                       <div><h1 className="px10  fnt-system xs-px20 fnt-system" >Social Media Marketing</h1></div>
                       <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><img src="/images/marketing.svg" alt="" /></span></div>
-                      <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Build a strong brand presence and engage with your audience on social media platforms. </p></div>
+                      <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Strengthen your brand and captivate your audience across social media. </p></div>
                     </div>
                   </div>
                 </Zoom>
@@ -238,11 +234,7 @@ const About = () => {
               <div className="my-col-6 xs-10 xs-off-1 off-3">
                 <span className="fnt-system xs-px20 bolder">Build Your Business Idea With Our IT Development Solutions.</span>
               </div>
-              <div className="my-col-8 xs-10 xs-off-1 xs-down-5 md-down-5 off-2 down-3">
-                <span className="xs-px13 faded-2 fnt-system">
-                  We specialize in revolutionizing your online presence through expert IT solutions.
-                </span>
-              </div>
+              
             </div>
             <div className="my-mother down-5 xs-down-10">
               <div className="img-container-3 unset-absolute rad-30">
@@ -263,8 +255,7 @@ const About = () => {
             <div className="my-col-8 off-2 xs-container xs-down-15 down-10 centered">
               <h1 className="px25 ubuntuMedium black fnt-system xs-px20 bolder" >Tailored Solutions, Proven Results,
                 And Exceptional Service</h1>
-              <div className="my-col-8 off-2 down-3 xs-container xs-down-5 lin-2" > <span className="px13 xs-px13 faded-2 fnt-system" >We pride ourselves on delivering a value proposition that goes beyond expectations. Our
-                approach is centered on understanding your business inside.</span> </div>
+              <div className="my-col-8 off-2 down-3 xs-container xs-down-5 lin-2" > <span className="px13 xs-px13 faded-2 fnt-system" >We deliver unmatched value by deeply understanding your business and exceeding expectations.</span> </div>
 
               <div className="my-mother down-3 xs-down-10 space-50" >
                 <div className="my-col-7 down-5 xs-12" >
@@ -273,7 +264,7 @@ const About = () => {
                       <div className="my-col-10 off-1 xs-10 xs-off-1 down-20" >
                         <h1 className="px10 white xs-px15 fnt-system bolder" >Our Values</h1>
                         <div className="my-mother down-3 xs-down-5 lin-2" >
-                          <span className="ubuntuBold px15 alice xs-px13 fnt-system light" > Explore Our Unique Value Proposition & How We Drive Business Growth</span>
+                          <span className="ubuntuBold px15 alice xs-px13 fnt-system light" > The foundation of our unique approach to driving business growth.</span>
                         </div>
                       </div>
                     </div>
@@ -334,7 +325,7 @@ const About = () => {
                   <div className="my-col-3 xs-container xs-down-5 rad-10 my-b-shadow h-200 card-hover bg-grad my-bottom-50" >
                     <div className="my-container xs-container xs-down-10 centered down-5" >
                       <div><h1 className="px10  ubuntuBold xs-px15 fnt-system bolder" >Mobile Apps & Softwares</h1></div>
-                      <div className="xs-container down-2 xs-down-5" ><span className="px9 xs-px13 faded-2 fnt-system light">Build your startup with professionally designed and user-friendly Apps. We optimize your Apps to rank higher. </span></div>
+                      <div className="xs-container down-2 xs-down-5" ><span className="px9 xs-px13 faded-2 fnt-system light">Kickstart your startup with professionally designed, user-friendly apps, optimized for top rankings and maximum impact. </span></div>
                       <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><Lottie animationData={mobile} loop={true} /></span></div>
                     </div>
                   </div>
@@ -343,7 +334,7 @@ const About = () => {
                   <div className="my-col-3 xs-container xs-down-5 rad-10 my-b-shadow h-200 card-hover bg-grad my-bottom-50" >
                     <div className="my-container xs-container xs-down-10 centered down-5" >
                       <div><h1 className="px10  ubuntuBold xs-px15 poppings-Medium bolder" >Social Media Marketing</h1></div>
-                      <div className="xs-container down-2 xs-down-5" ><span className="px9 xs-px13 fnt-system light faded-2">Build a strong brand presence and engage with your audience on social media platforms. </span></div>
+                      <div className="xs-container down-2 xs-down-5" ><span className="px9 xs-px13 fnt-system light faded-2">Strengthen your brand and captivate your audience across social media.</span></div>
                       <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><Lottie animationData={animationData} loop={true} /> </span></div>
                     </div>
                   </div>

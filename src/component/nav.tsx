@@ -81,7 +81,7 @@ const NavBar = ({ active }: any) => {
                     </div>
                   </div>
                   <div className="my-mother down-4">
-                    <a href="#" className="rad-30 card-hover px8 white fnt-system bg-color-code-1 b-shadow my-btn-sm bold" onClick={() => { Navigate('/contacts') }}>Free Consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
+                    <a href="#" className="rad-30 card-hover px8 white fnt-system bg-color-code-1 b-shadow my-btn-sm bold" onClick={() => { Navigate('/contacts') }}>Book a free consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
                   </div>
                 </div>
               </Fade>
@@ -89,7 +89,7 @@ const NavBar = ({ active }: any) => {
             <a href="#" className={`px9 pd-10 black ubuntuMedium ${active == 'contacts' && "color-code-1"} `} onClick={() => { Navigate('/contacts') }} >Contact Us</a>
           </div>
           <div className="">
-            <a href="#" className="rad-30 card-hover px8 white fnt-system bolder bg-color-code-1 my-btn-sm" onClick={() => { Navigate('/contacts') }}>Free Consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
+            <a href="#" className="rad-30 card-hover px8 white fnt-system bolder bg-color-code-1 my-btn-sm" onClick={() => { Navigate('/contacts') }}>Book a free consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
           </div>
         </div>
       </nav>
@@ -97,7 +97,7 @@ const NavBar = ({ active }: any) => {
       <div className="mobile-menu hidden-ls">
         <div className="mobile-nav-container">
           <i className="fas fa-bars pd-10 rad-10 bd-code-2 xs-px20 fade-2" onClick={() => { setOpenNav(true) }}></i>
-          <div className="my-btn-sm bg-color-code-1 fnt-system bolder xs-px12 white" onClick={() => { Navigate('/contacts') }}>Free Consultation</div>
+          <div className="my-btn-sm bg-color-code-1 fnt-system bolder xs-px12 white" onClick={() => { Navigate('/contacts') }}>Book a free consultation</div>
         </div>
       </div>
 

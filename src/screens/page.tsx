@@ -12,6 +12,14 @@ import webdev from "../animations/webdev.json";
 import mobile from "../animations/mobile.json";
 import merketing from "../animations/maketing.json";
 import TrustedBy from "../component/trustedBy"
+import VideoCarousel from "../pages/components/video_carousel"
+
+
+const videoData = [
+  { id: '1', title: 'Company Introduction', src: '/intro.mp4', description: 'Learn about our company values and mission' },
+  { id: '2', title: 'Product Showcase', src: '/prod.mp4', description: 'Explore our latest products and innovations' },
+];
+
 
 const Home = () => {
   const [plans, setPlans] = useState('BASIC');
@@ -76,13 +84,12 @@ const Home = () => {
               <div className="my-mother top-10 hidden-xs">
                 <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
               </div>
-              <h1 className="px25 xs-px20 my-mother down-2 ubuntuMedium black fnt-system bolder" >Comprehensive IT & Digital Marketing Solutions.</h1>
-              <div className="xs-10 xs-off-1 down-2 xs-down-5 lin-2" >
-                <span className="px12 ubuntuLight xs-px13 fnt-system light faded-2" >We are your trusted partner for <span className="color-code-1 bold" >IT solutions</span>. With our proven expertise and innovative strategies the digital landscape.</span>
-              </div>
-              <div className="my-mother gap-elements-centered down-3 xs-down-8" >
-                <a href="#" className="rad-30 px13 xs-px13 b-shadow fnt-system  bolder white bg-yellow my-btn-sm" onClick={() => { Navigate('/video') }} >Take a Video Tour <span className="icons bg-white xs-px12  mg-10 px8" ><i className="fas orange  fa-play" ></i></span> </a>
-              </div>
+             
+              <Zoom>
+          <div className="video-container">
+            <VideoCarousel videos={videoData} />
+          </div>
+          </Zoom>
               {/* <div className="my-mother top-10 hidden-ls">
                 <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
               </div> */}
@@ -114,7 +121,7 @@ const Home = () => {
             <div className="my-col-3 xs-container xs-down-5 rad-10 my-b-shadow h-200 card-hover bg-grad my-bottom-50" >
               <div className="my-container xs-container xs-down-10 centered down-5" >
                 <div><h1 className="px10  ubuntuBold xs-px15 fnt-system bolder" >Mobile Apps & Softwares</h1></div>
-                <div className="xs-10 xs-off-1 down-2 xs-down-5" ><span className="px9 xs-px13 faded-2 fnt-system light">Build your startup with professionally designed and user-friendly Apps. We optimize your Apps to rank higher. </span></div>
+                <div className="xs-10 xs-off-1 down-2 xs-down-5" ><span className="px9 xs-px13 faded-2 fnt-system light">Kickstart your startup with professionally designed, user-friendly apps, optimized for top rankings and maximum impact. </span></div>
                 <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><Lottie animationData={mobile} loop={true} /></span></div>
               </div>
             </div>
@@ -123,7 +130,7 @@ const Home = () => {
             <div className="my-col-3 xs-container xs-down-5 rad-10 my-b-shadow h-200 card-hover bg-grad my-bottom-50" >
               <div className="my-container xs-container xs-down-10 centered down-5" >
                 <div><h1 className="px10  ubuntuBold xs-px15 poppings-Medium bolder" >Social Media Marketing</h1></div>
-                <div className="xs-10 xs-off-1 down-2 xs-down-5" ><span className="px9 xs-px13 fnt-system light faded-2">Build a strong brand presence and engage with your audience on social media platforms. </span></div>
+                <div className="xs-10 xs-off-1 down-2 xs-down-5" ><span className="px9 xs-px13 fnt-system light faded-2">Strengthen your brand and captivate your audience across social media.</span></div>
                 <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><Lottie animationData={animationData} loop={true} /> </span></div>
               </div>
             </div>
@@ -147,8 +154,7 @@ const Home = () => {
       <div className="my-col-8 off-2 xs-container xs-down-15 down-10 centered">
         <h1 className="px25 ubuntuMedium black fnt-system xs-px20 bolder" >Tailored Solutions, Proven Results,
           And Exceptional Service</h1>
-        <div className="my-col-8 off-2 down-3 xs-container xs-down-5 lin-2" > <span className="px13 xs-px13 faded-2 fnt-system" >We pride ourselves on delivering a value proposition that goes beyond expectations. Our
-          approach is centered on understanding your business inside.</span> </div>
+        <div className="my-col-8 off-2 down-3 xs-container xs-down-5 lin-2" > <span className="px13 xs-px13 faded-2 fnt-system" >We deliver unmatched value by deeply understanding your business and exceeding expectations.</span> </div>
 
         <div className="my-mother down-3 xs-down-10 space-50" >
           <div className="my-col-7 down-5 xs-12" >
@@ -157,7 +163,7 @@ const Home = () => {
                 <div className="my-col-10 off-1 xs-10 xs-off-1 down-20" >
                   <h1 className="px10 white xs-px15 fnt-system bolder" >Our Values</h1>
                   <div className="my-mother down-3 xs-down-5 lin-2" >
-                    <span className="ubuntuBold px15 alice xs-px13 fnt-system light" > Explore Our Unique Value Proposition & How We Drive Business Growth</span>
+                    <span className="ubuntuBold px15 alice xs-px13 fnt-system light" > The foundation of our unique approach to driving business growth.</span>
                   </div>
                 </div>
               </div>
@@ -251,7 +257,7 @@ const Home = () => {
                   <span className="black px10 ubuntuLight fnt-system light xs-px13"><span className="ubuntuBold fnt-system black">Free Consultation & reviews</span></span>
                 </div>
                 <div className="my-mother down-5 xs-down-10">
-                  <a href="#" className="rad-30 px9 white fnt-system bolder bg-color-code-1 my-btn-sm xs-px13" onClick={() => { Navigate('/contacts') }}> Contact Now <span className="icons bg-white mg-10 px8 xs-px13" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
+                  <a href="#" className="rad-30 px9 white fnt-system bolder bg-color-code-1 my-btn-sm xs-px13" onClick={() => { Navigate('/contacts') }}>  Contact us now   <span className="icons bg-white mg-10 px8 xs-px13" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
                 </div>
               </div>
             </div>

@@ -10,6 +10,14 @@ import WmFooter from '../../component/footer';
 import NavBar from "../../component/nav";
 import Lottie from "lottie-react";
 import animationData from "../../animations/Animation - 1737036630886.json";
+import "../components/video_carousel.css";
+import VideoCarousel from "../components/video_carousel";
+  
+
+const videoData = [
+    { id: '1', title: 'Company Introduction', src: '/intro.mp4', description: 'Learn about our company values and mission' },
+    { id: '2', title: 'Product Showcase', src: '/prod.mp4', description: 'Explore our latest products and innovations' },
+  ];
 
 const HomePage = () => {
     const [plans, setPlans] = useState('BASIC');
@@ -61,46 +69,18 @@ const HomePage = () => {
                 </div>
             </div>
         </section>
-
-
-        <section className='fnt-system bg-grad centered-align'>
-            <Fade bottom >
-                <div className="my-mother my-bottom-50" >
-                    <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
-                    <div className="my-col-8 off-2 xs-container down-15" >
-                        <div className="img-container-2 xs-down-8vh xs-12 hidden-ls" > <div className="bg-overa" ></div> <img src="https://img.freepik.com/premium-photo/young-black-businessman-suit-sitting-staircase-while-using-his-laptop-work_672594-2788.jpg?ga=GA1.1.1911375869.1733410522&semt=ais_hybrid" alt="" /> </div>
-                        <div className="my-mother gap-elements">
-                            <div className="img-container-2 my-col-4 xs-4 hidden-xs" > <div className="bg-overla" ></div> <img src="/images/lady_1.jpeg" alt="" /> </div>
-                            <div className="my-col-7 xs-12 xs-down-8 down-10 mg-5" >
-                                <div className="my-container down-10" >
-                                    <div className="my-mother top-10 hidden-xs">
-                                        <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
-                                    </div>
-                                    <h1 className="px25 xs-px30 my-mother down-2 black fnt-system" >Comprehensive IT & Digital Marketing Solutions.</h1>
-                                    <p className="my-mother down-2 xs-down-5" >
-                                        <span className="px12 xs-px20 fnt-system faded-2" >We are your trusted partner for comprehensive SEO and IT solutions. With our proven expertise and innovative strategies the digital landscape.</span>
-                                    </p>
-                                    <div className="my-mother gap-elements down-3 xs-down-8" >
-                                        <a href="#" className="rad-30 px9 b-shaow white centered-align my-btn-sm my-b-shadow fnt-system xs-px15 bg-yellow" onClick={() => { Navigate('/about') }} >Learn More<span className="icons bg-white xs-px12  mg-10 px8" ><i className="fas orange deg-45 fa-arrow-up" ></i></span> </a>
-                                    </div>
-                                    <div className="my-mother top-10 hidden-ls">
-                                        <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="img-container-2 down-20 my-col-3 xs-12 hidden-xs hidden-md" >
-                                <div className="bg-overla" ></div>
-                                <img src="/images/man_1.jpeg" alt="" />
-                            </div>
-                        </div>
-                        <div className="img-container-2 down-20 my-col-3 xs-12 hidden-ls hidden-xs hidden-md" >
-                            <div className="bg-overla" ></div>
-                            <img src="https://img.freepik.com/free-photo/healthy-lifestyle-sustained-home_23-2149362436.jpg?ga=GA1.1.1911375869.1733410522&semt=ais_hybrid" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </Fade>
-        </section>
+      
+        <section className="fnt-system bg-grad centered-align">
+        
+        <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
+      <Fade bottom>
+      <div className="video-container">
+     
+            <VideoCarousel videos={videoData} />
+          </div>
+      </Fade>
+    
+    </section>
 
         <section className='fnt-system bg-grad centered-align'>
             <Fade bottom>
@@ -127,7 +107,7 @@ const HomePage = () => {
                                     <div className="my-container xs-container xs-down-10 centered down-5" >
                                         <div><h1 className="px10  fnt-system xs-px20 fnt-system" >Mobile Apps & Softwares</h1></div>
                                         <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><img src="/images/appdev.svg" alt="" /></span></div>
-                                        <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Build your startup with professionally designed and user-friendly Apps. We optimize your Apps to rank higher. </p></div>
+                                        <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Kickstart your startup with professionally designed, user-friendly apps, optimized for top rankings and maximum impact. </p></div>
                                     </div>
                                 </div>
                             </Zoom>
@@ -136,7 +116,7 @@ const HomePage = () => {
                                     <div className="my-container xs-container xs-down-10 centered down-5" >
                                         <div><h1 className="px10  fnt-system xs-px20 fnt-system" >Social Media Marketing</h1></div>
                                         <div className="my-mother down-5 center-content centered xs-down-8" ><span className="plate-img p-r" ><img src="/images/marketing.svg" alt="" /></span></div>
-                                        <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Build a strong brand presence and engage with your audience on social media platforms. </p></div>
+                                        <div className="my-mother down-2 xs-down-5" ><p className="px9 xs-px15 fnt-system">Strengthen your brand and captivate your audience across social media. </p></div>
                                     </div>
                                 </div>
                             </Zoom>
@@ -163,8 +143,7 @@ const HomePage = () => {
                     <div className="my-col-8 off-2 xs-container xs-down-10 down-10 centered">
                         <h1 className="px25 black fnt-system xs-px20" >Tailored Solutions, Proven Results,
                             <br className="hidden-xs" /> And Exceptional Service</h1>
-                        <div className="my-col-8 off-2 down-3 xs-12 xs-down-5" > <p className="px12 xs-px15 faded-2 fnt-system " >We pride ourselves on delivering a value proposition that goes beyond expectations. Our
-                            approach is centered on understanding your business inside.</p> </div>
+                        <div className="my-col-8 off-2 down-3 xs-12 xs-down-5" > <p className="px12 xs-px15 faded-2 fnt-system " >We deliver unmatched value by deeply understanding your business and exceeding expectations.</p> </div>
 
                         <div className="my-mother down-5 ls-gap-elements xs-down-10" >
                             <div className="my-col-7 down- xs-12" >
@@ -173,7 +152,7 @@ const HomePage = () => {
                                         <div className="my-col-10 off-1 xs-10 xs-off-1 down-20" >
                                             <h1 className="px13 white  xs-px20 fnt-system" >Our Values</h1>
                                             <p className="my-mother down-1 xs-down-1" >
-                                                <span className="fnt-system px12 white xs-px13 fnt-system" > Explore Our Unique Value Proposition & How We Drive Business Growth</span>
+                                                <span className="fnt-system px12 white xs-px13 fnt-system" > The foundation of our unique approach to driving business growth.</span>
                                             </p>
                                         </div>
                                     </div>
@@ -273,7 +252,7 @@ const HomePage = () => {
                                             <span className="black px10 fnt-system xs-px13"><span className="fnt-system fnt-system  black">Free Consultation & reviews</span></span>
                                         </div>
                                         <div className="my-mother down-5 xs-down-10">
-                                            <a href="#" className="rad-30 px9 white fnt-system bg-color-code-1 my-btn-sm xs-px15" onClick={() => { Navigate('/contacts') }}> Contact Now <span className="icons bg-white mg-10 px8 xs-px13" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
+                                            <a href="#" className="rad-30 px9 white fnt-system bg-color-code-1 my-btn-sm xs-px15" onClick={() => { Navigate('/contacts') }}>  Contact us now   <span className="icons bg-white mg-10 px8 xs-px13" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
                                         </div>
                                     </div>
                                 </div>

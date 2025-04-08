@@ -1,8 +1,6 @@
 import React from 'react';
 import { Zoom, Fade } from "react-reveal"
-import VideoCarousel from './video_carousel';
-import WmFooter from "../../component/footer";
-import NavBar from "../../component/nav";
+import VideoCarousel from "./video_carousel";
 import './video.css'
 
 
@@ -14,8 +12,6 @@ const videoData = [
 function VideoPlayerPage() {
   return (
     <>
-<NavBar active="video" />
-    <div className="video-page">
       <main>
         <div className="container">
           <div className="text-center">
@@ -23,13 +19,15 @@ function VideoPlayerPage() {
               Discover our story, products, and success through our curated video collection.
             </p>
           </div>
+          <Fade bottom>
           <div className="video-container">
             <VideoCarousel videos={videoData} />
           </div>
+          </Fade>
         </div>
       </main>
-      <WmFooter />
-  </div>
+   
+
 </>
   );
 }

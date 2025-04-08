@@ -1,10 +1,4 @@
-.video-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 2rem 0;
-  }
+
   
   .container {
     max-width: 1200px;
@@ -29,11 +23,12 @@
   
   .video-container {
     background-color: transparent;
+    position-area: center;
     border-radius: 1.5rem;
     padding: 1rem;
-    max-width: 700px;  /* Reduced from 800px */
+    max-width: 2500px;  /* Reduced from 800px */
     margin: 0 auto;
-    width: 85%;  /* Reduced from 90% */
+    width: 100%;  /* Reduced from 90% */
   }
   
   @media (max-width: 768px) {

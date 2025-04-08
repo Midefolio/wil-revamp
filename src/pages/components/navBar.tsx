@@ -14,7 +14,7 @@ const NavBar = () => {
               <button  className='link fnt-system xs-px15' onClick={()=> {Navigate('/blogs')}} >Blogs </button> 
             </div>
             <div>
-                <button className="button button-primary fnt-system">Free Consultation <span className="icons bg-white white mg-5 xs-px8" ><i className="fas xs-px10 color-code-1 deg-45 fa-arrow-up" ></i></span></button>
+                <button className="button button-primary fnt-system">Book a free consultation <span className="icons bg-white white mg-5 xs-px8" ><i className="fas xs-px10 color-code-1 deg-45 fa-arrow-up" ></i></span></button>
             </div>
         </div>
      </div>
