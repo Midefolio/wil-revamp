@@ -78,7 +78,7 @@ const HomePage = () => {
   <div className="my-col-8 off-2 down-5 centered">
   <Fade bottom>
   
-        <h2 className="px25  black fnt-system xs-px25">Welcome to WilmaestroIt</h2>
+        <h1 className="px25  black fnt-system xs-px25">Welcome to WilmaestroIt</h1>
       
 
       <div className="lg-mother down-5 xs-down-12">
