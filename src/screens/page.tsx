@@ -12,12 +12,13 @@ import webdev from "../animations/webdev.json";
 import mobile from "../animations/mobile.json";
 import merketing from "../animations/maketing.json";
 import TrustedBy from "../component/trustedBy"
-import VideoCarousel from "../pages/components/video_carousel"
+import VideoCarousel from "../pages/components/video_carousel";
+import './page.css';
 
 
 const videoData = [
   { id: '1', title: 'Company Introduction', src: '/intro.mp4', description: 'Learn about our company values and mission' },
-  { id: '2', title: 'Product Showcase', src: '/prod.mp4', description: 'Explore our latest products and innovations' },
+  
 ];
 
 
@@ -74,30 +75,26 @@ const Home = () => {
       </div>
     </div>
 
-    <div className="my-mother my-bottom-50" >
-      <div className="my-col-8 off-2 xs-container centered" >
-        <div className="xs-down- xs-down-3vh xs-12"> <Lottie animationData={mobile} loop={true} /></div>
-        {/* <div className="img-container-3 xs-down-8vh xs-12 hidden-ls" > <div className="bg-overay" ></div> <img src="https://img.freepik.com/premium-photo/young-black-businessman-suit-sitting-staircase-while-using-his-laptop-work_672594-2788.jpg?ga=GA1.1.1911375869.1733410522&semt=ais_hybrid" alt="" /> </div> */}
-        <div className="my-mother gap-elements">
-          <div className="my-col-7 xs-12 down-10 mg-5" >
-            <div className="my-container down-10" >
-              <div className="my-mother top-10 hidden-xs">
-                <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
-              </div>
-             
-              <Zoom>
-          <div className="video-container">
-            <VideoCarousel videos={videoData} />
-          </div>
-          </Zoom>
-              {/* <div className="my-mother top-10 hidden-ls">
-                <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
-              </div> */}
-            </div>
-          </div>
-        </div>
+    
+        <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
+  <div className="my-mother my-bottom-50">
+  <div className="my-col-8 off-2 xs-container down-5 xs-down-10" >
+  <div className="my-col-8 off-2 down-5 centered">
+    
+  <Zoom>
+        <h2 className="px25  black fnt-system xs-px25">Welcome to WilmaestroIt</h2>
+      
+
+      <div className="lg-mother down-5 xs-down-10">
+        <VideoCarousel videos={videoData} />
       </div>
-    </div>
+    </Zoom>
+  </div>
+  </div>
+  </div> 
+
+       
+     
 
     <div className="my-mother my-bottom-50 hidden-s bg-white" >
       <div className="my-col-8 off-2 xs-container down-5 xs-down-15" >

@@ -71,16 +71,24 @@ const HomePage = () => {
         </section>
       
         <section className="fnt-system bg-grad centered-align">
-        
+
         <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
-      <Fade bottom>
-      <div className="video-container">
-     
-            <VideoCarousel videos={videoData} />
-          </div>
+  <div className="my-mother my-bottom-50">
+  <div className="my-col-8 off-2 xs-container down-5 xs-down-10" >
+  <div className="my-col-8 off-2 down-5 centered">
+  <Fade bottom>
+  
+        <h2 className="px25  black fnt-system xs-px25">Welcome to WilmaestroIt</h2>
+      
+
+      <div className="lg-mother down-5 xs-down-12">
+        <VideoCarousel videos={videoData} />
+      </div>
       </Fade>
-    
-    </section>
+  </div>
+  </div>
+  </div> 
+</section>
 
         <section className='fnt-system bg-grad centered-align'>
             <Fade bottom>

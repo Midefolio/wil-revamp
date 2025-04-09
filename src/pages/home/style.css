@@ -49,27 +49,8 @@ section {
     align-items: center;
     justify-content: center;
 }
-.video-container {
-    position: relative;
-    width: 57%;
-    max-width: 750px;
-    margin: 0 auto;
-    aspect-ratio: 16/9;
-    border-radius: 1rem;
-    overflow: hidden;
-    background-color: #000000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-.description {
-    font-size: 1.25rem;
-    text-align: center;
-    color: white;
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.6;
-    font-weight: 400;
-}
+
+
 .pulse-circle::after {
     content: '';
     width: 6rem;

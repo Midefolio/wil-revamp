@@ -48,20 +48,6 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ videos }) => {
     showControlsTemporarily();
   };
 
-  // Change video
-  const goToVideo = (index: number) => {
-    setCurrentIndex(index);
-    const videoEl = videoRef.current;
-    if (videoEl) {
-      videoEl.src = videos[index].src;
-      videoEl.currentTime = 0;
-      videoEl.muted = false; // Unmute new video
-      videoEl.play();        // Always play when switching
-      setIsPlaying(true);
-      setIsMuted(false);
-    }
-    showControlsTemporarily();
-  };
 
   // Auto-advance on end
   useEffect(() => {
@@ -110,16 +96,16 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ videos }) => {
         onMouseEnter={() => setShowControls(true)}
         onMouseLeave={() => setTimeout(() => setShowControls(false), 2000)}
       >
-        <video
-          ref={videoRef}
-          src={videos[currentIndex].src}
-          className="video-element absolute w-full h-full object-cover cursor-pointer"
-          playsInline
-          // Allow toggling play/pause on both click and touch
-          onClick={handlePlayPause}
-          onTouchStart={handlePlayPause}
-        />
-
+       <video
+  ref={videoRef}
+  src={videos[currentIndex].src}
+  className="video-element absolute w-full h-full object-cover cursor-pointer"
+  playsInline
+  preload="auto"
+  loop                 
+  onClick={handlePlayPause}
+  onTouchStart={handlePlayPause}
+/>
         {showControls && (
           <div className="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-3 flex justify-between items-center transition-opacity duration-300">
             <button onClick={handlePlayPause} className="control-button bg-transparent p-2 rounded-full hover:bg-white/10 transition">
@@ -135,20 +121,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ videos }) => {
         )}
       </div>
 
-      <div className="navigation-controls flex justify-between items-center mt-4 px-4">
-        <button
-          onClick={() => goToVideo((currentIndex - 1 + videos.length) % videos.length)}
-          className="nav-button w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition"
-        >
-          <ChevronLeft className="w-5 h-5 text-gray-700" />
-        </button>
-        <button
-          onClick={() => goToVideo((currentIndex + 1) % videos.length)}
-          className="nav-button w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition"
-        >
-          <ChevronRight className="w-5 h-5 text-gray-700" />
-        </button>
-      </div>
+      
     </div>
   );
 };
