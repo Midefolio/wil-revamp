@@ -81,7 +81,7 @@ const NavBar = ({ active }: any) => {
                     </div>
                   </div>
                   <div className="my-mother down-4">
-                    <a href="#" className="rad-30 card-hover px8 white fnt-system bg-color-code-1 b-shadow my-btn-sm bold" onClick={() => { Navigate('/contacts') }}>Book a free consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
+                    <a href="#" className="rad-30 card-hover px8 white fnt-system bg-yellow b-shadow my-btn-sm bold" onClick={() => { Navigate('/contacts') }}>Book a free consultation <span className="icons bg-white mg-10 px8" ><i className="fas color-code-1 deg-45 fa-arrow-up" ></i></span> </a>
                   </div>
                 </div>
               </Fade>

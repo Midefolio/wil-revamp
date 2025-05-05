@@ -76,22 +76,31 @@ const Home = () => {
     </div>
 
     
-        <span className="plate-img down-20 slide xs-down-8vh" ><img src="/images/elements1.png" alt="" /></span>
-  <div className="my-mother my-bottom-50">
-  <div className="my-col-8 off-2 xs-container down-5 xs-down-10" >
-  <div className="my-col-8 off-2 down-5 centered">
-    
-  <Zoom>
-        <h2 className="px25  black fnt-system xs-px25">Welcome to WilmaestroIt</h2>
-      
-
-      <div className="lg-mother down-5 xs-down-10">
-        <VideoCarousel videos={videoData} />
+    <div className="my-mother my-bottom-50" >
+      <div className="my-col-8 off-2 xs-container centered" >
+        <div className="xs-down- xs-down-3vh xs-12"> <Lottie animationData={mobile} loop={true} /></div>
+        {/* <div className="img-container-3 xs-down-8vh xs-12 hidden-ls" > <div className="bg-overay" ></div> <img src="https://img.freepik.com/premium-photo/young-black-businessman-suit-sitting-staircase-while-using-his-laptop-work_672594-2788.jpg?ga=GA1.1.1911375869.1733410522&semt=ais_hybrid" alt="" /> </div> */}
+        <div className="my-mother gap-elements">
+          <div className="my-col-7 xs-12 down-10 mg-5" >
+            <div className="my-container down-10" >
+              <div className="my-mother top-10 hidden-xs">
+                <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
+              </div>
+              <h1 className="px25 xs-px20 my-mother down-2 ubuntuMedium black fnt-system bolder" >Comprehensive IT & Digital Marketing Solutions.</h1>
+              <div className="xs-10 xs-off-1 down-2 xs-down-5 lin-2" >
+                <span className="px12 ubuntuLight xs-px13 fnt-system light faded-2" >We are your trusted partner for comprehensive SEO and IT solutions, leveraging proven expertise and innovative strategies to navigate the digital landscape.</span>
+              </div>
+              <div className="my-mother gap-elements-centered down-3 xs-down-8" >
+                <a href="#" className="rad-30 px13 xs-px13 b-shadow fnt-system  bolder white bg-yellow my-btn-sm" onClick={() => { Navigate('/about') }} >THIS IS WILLMAESTRO <span className="icons bg-white xs-px12  mg-10 px8" ><i className="fas orange  fa-play" ></i></span> </a>
+              </div>
+              {/* <div className="my-mother top-10 hidden-ls">
+                <div className="plate-img p-r top-5 " ><img className=" fa-spin scale-8" src="/images/circle.png" alt="" /></div>
+              </div> */}
+            </div>
+          </div>
+        </div>
       </div>
-    </Zoom>
-  </div>
-  </div>
-  </div> 
+    </div>
 
        
      
